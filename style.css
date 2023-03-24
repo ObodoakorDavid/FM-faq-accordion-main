@@ -53,6 +53,7 @@ main {
 
 .woman-mobile {
   width: 50%;
+  filter: drop-shadow(3px 14px 10px rgb(233, 230, 230));
 }
 .accordion-container {
   display: flex;
@@ -64,6 +65,15 @@ main {
   text-align: left;
   border-bottom: 1px solid rgb(235, 232, 232);
   padding: 14px 0;
+  position: relative;
+}
+
+.accordion img {
+  transition: 0.2s ease-in-out;
+}
+
+.accordion img.active {
+  transform: rotate(180deg);
 }
 
 .inner-accordion {
@@ -77,5 +87,13 @@ main {
 }
 
 .accordion-detail {
-  display: none;
+  transform: scaleY(0);
+  transition: 0.3s ease-in;
+  transform-origin: top;
+  padding: 13px 0;
+  position: absolute;
+}
+.accordion-detail.active {
+  transform: scaleY(1);
+  position: relative;
 }
