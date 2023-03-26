@@ -106,7 +106,7 @@ main {
 @media (min-width: 768px) {
   main {
     display: flex;
-    max-width: 850px;
+    max-width: 670px;
     justify-content: end;
     text-align: left;
   }
