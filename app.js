@@ -10,37 +10,39 @@ accordions.forEach((eachAccordion) => {
     // removing all classes first
     accordions.forEach((eachAcc) => {
       eachAcc.firstElementChild.nextElementSibling.classList.remove("active");
-      eachAcc.firstElementChild.nextElementSibling.classList.remove("active");
+      eachAcc.firstElementChild.firstElementChild.nextElementSibling.classList.remove(
+        "active"
+      );
       eachAcc.firstElementChild.firstElementChild.classList.remove("active");
     });
 
-    // console.log(eachAccordion.firstElementChild.nextElementSibling);
+    console.log(
+      eachAccordion.firstElementChild.firstElementChild.nextElementSibling
+    );
     // console.log(e);
 
-    if (
-      eachAccordion.firstElementChild.nextElementSibling.classList.contains(
-        "active"
-      )
-    ) {
-      eachAccordion.firstElementChild.nextElementSibling.classList.remove(
-        "active"
-      );
-      eachAccordion.firstElementChild.nextElementSibling.classList.remove(
-        "active"
-      );
-      eachAccordion.firstElementChild.firstElementChild.classList.remove(
-        "active"
-      );
-      console.log("kk");
-    } else {
-      eachAccordion.firstElementChild.nextElementSibling.classList.add(
-        "active"
-      );
-      eachAccordion.firstElementChild.nextElementSibling.classList.add(
-        "active"
-      );
-      eachAccordion.firstElementChild.firstElementChild.classList.add("active");
-    }
+    // if (
+    //   eachAccordion.firstElementChild.nextElementSibling.classList.contains(
+    //     "active"
+    //   )
+    // ) {
+    //   eachAccordion.firstElementChild.nextElementSibling.classList.remove(
+    //     "active"
+    //   );
+    //   eachAccordion.firstElementChild.firstElementChild.nextElementSibling.classList.remove(
+    //     "active"
+    //   );
+    //   eachAccordion.firstElementChild.firstElementChild.classList.remove(
+    //     "active"
+    //   );
+    //   console.log("kk");
+    // } else {
+    eachAccordion.firstElementChild.nextElementSibling.classList.add("active");
+    eachAccordion.firstElementChild.firstElementChild.nextElementSibling.classList.add(
+      "active"
+    );
+    eachAccordion.firstElementChild.firstElementChild.classList.add("active");
+    // }
 
     // adding class to just the active one
 
